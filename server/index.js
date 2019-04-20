@@ -4,6 +4,7 @@ const PORT = process.env.PORT || 8080;
 const path = require('path');
 const app = express();
 const cors = require('cors');
+const $ = require('jquery');
 
 app.use(cors());
 app.use(bodyParser.json());

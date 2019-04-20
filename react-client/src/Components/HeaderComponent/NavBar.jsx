@@ -11,7 +11,7 @@ class NavBar extends Component {
                         <ul id="nav-mobile" class="right hide-on-med-and-down">
                             <li><a href="sass.html">Home</a></li>
                             <li><a href="badges.html">About</a></li>
-                            <li><a href="collapsible.html">Project</a></li>
+                            <li><a href="collapsible.html">Projects</a></li>
                         </ul>
                     </div>
                 </nav>

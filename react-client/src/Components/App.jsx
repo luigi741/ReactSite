@@ -4,16 +4,14 @@ import { browserHistory } from 'react-router';
 import HomePage from './HomePage';
 import NavBar from './HeaderComponent/NavBar';
 import Footer from './FooterComponent/Footer';
+import SideNav from './SideNavComponent/SideNav';
 
 class App extends Component {
     render() {
         return (
             <Router>
-                <div>
-                    <NavBar />
-                    <HomePage />
-                    <Route name="home" exact path="/" />
-                </div>
+                <HomePage />
+                <Route name="home" exact path="/" />
             </Router>
         )
     }
