@@ -5,9 +5,16 @@ class NavBar extends Component {
     render() {
         return (
             <header>
-                <ul id="headerButtons">
-                    <li className="navButton"><Link to="">Home</Link></li>
-                </ul>
+                <nav>
+                    <div class="nav-wrapper">
+                        <a href="#" class="brand-logo padLeft">Logo</a>
+                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                            <li><a href="sass.html">Home</a></li>
+                            <li><a href="badges.html">About</a></li>
+                            <li><a href="collapsible.html">Project</a></li>
+                        </ul>
+                    </div>
+                </nav>
             </header>
         )
     }
