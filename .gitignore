@@ -10,3 +10,8 @@ bundle.js
 # Dependency directories
 node_modules/
 node_modules/*
+
+#
+/react-client/dist/bundle.js
+webpack.config.js
+webpack.config.*
