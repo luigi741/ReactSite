@@ -11,7 +11,7 @@ bundle.js
 node_modules/
 node_modules/*
 
-#
+# Other files
 /react-client/dist/bundle.js
 webpack.config.js
 webpack.config.*
