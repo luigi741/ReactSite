@@ -12,10 +12,57 @@ main {
     flex: 1 0 auto;
 }
 
-imgResize {
+#sideCard {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    height: 100vh;
+    background-color: #fff;
+    -webkit-transition: -webkit-box-shadow .25s;
+    transition: -webkit-box-shadow .25s;
+    transition: box-shadow .25s;
+    transition: box-shadow .25s, -webkit-box-shadow .25s;
+    border-radius: 2px;
+}
+
+#sideNavList {
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+#verticalTabs {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100px;
+    width: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    white-space: nowrap;
+}
+
+/* imgResize {
     width: 50%;
     height: auto;
     background-image: url(./img/lcastro.jpg);
+} */
+#imgResize {
+    width: 265px;
+    height: 300px;
+}
+
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
 }
 
 .lsideBar {
@@ -26,4 +73,79 @@ imgResize {
     position: fixed;
     height: 100%;
     overflow: auto;
+}
+
+a.active {
+    font-weight: 500;
+    padding-left: 14px;
+    border-right: 2px solid #ee6e73;
+}
+
+#centerDiv {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#horDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* This is CSS for mobile screens */
+@media only screen and (max-width: 600px) {
+    #leftMenu {
+        display: none;
+    }
+
+    #mainScreen {
+        /* display: initial;
+        height: 100%; */
+        padding: 0;
+        border: 0;
+        margin: 0;
+        height: 100vh;
+        content: url(./img/board1.jpg);
+        object-fit: fill;
+    }
+
+    #rootBody {
+        overflow: hidden;
+    }
+}
+
+/* Non-mobile screens */
+@media only screen and (min-width: 601px) {
+    #rootBody {
+        overflow: hidden;
+    }
+
+    #mainScreen {
+        padding: 0;
+        border: 0;
+        margin: 0;
+        height: 100vh;
+        background-image: url(./img/boardNew.jpg);
+        object-fit: fit;
+    }
+
+    .centerDiv {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
 }

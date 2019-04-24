@@ -15,15 +15,21 @@ module.exports = {
     module: {
         rules: [{
                 test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
             },
             {
                 test: /\.png$/,
                 loader: 'url-loader?limit=100000&minetype=image/png'
             },
             {
-                test: /\.jpg/,
-                loader: 'file-loader'
+                test: /\.(png|jpg|gif)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {}
+                }]
             },
             {
                 test: /\.jsx?/,

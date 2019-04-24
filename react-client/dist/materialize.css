@@ -7705,7 +7705,7 @@ input[type=range]::-ms-thumb {
   left: 0;
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  position: fixed;
+  position: relative;
 }
 
 .sidenav.sidenav-fixed.right-aligned {
