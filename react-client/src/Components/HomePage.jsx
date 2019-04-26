@@ -5,9 +5,6 @@ import styles from '../../dist/styles.css';
 import '../../dist/styles.css';
 
 class HomePage extends Component {
-    buttonAlert() {
-        alert('YEET');
-    }
 
     render() {
         const imgStyle  = { 'object-fit': 'fill' };
@@ -15,20 +12,25 @@ class HomePage extends Component {
         const centered  = { 'text-align': 'center', 'vertical-align': 'top' };
         const fillCard  = { height: '100vh', 'vertical-align': 'top' };
         const navFill   = { padding: '0' };
+        const width     = { width: '100%' };
+        const iconSize  = { 'font-size': '35px', 'padding-top': '10px', 'padding-left': '10px' };
 
         return (
             <div class="row" style={fitTight}>
-                <div class='col s12 m4 l2 sidenav sidenav-fixed' style={navFill}>
-                    <ul>
-                        <li><a href='/'> Home </a></li>
-                        <li><a href='/'> About </a></li>
-                        <li><a href='/'> Projects </a></li>
-                        <li><a href='/'> Contact </a></li>
-                    </ul>
+                <div class='col s12 m4 l1 sidenav sidenav-fixed aligner' style={navFill} id='leftMenu'>
+                    <div class='aligner-item' style={width}>
+                        <ul>
+                            <li><a href='/'> Home </a></li>
+                            <li><a href='/'> About </a></li>
+                            <li><a href='/'> Projects </a></li>
+                            <li><a href='/'> Contact </a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div id='mainScreen' class="col s12 m8 l10">
-                    <div class='content'>
-                        <div class="card horizontal hoverable">
+
+                <div id='mainScreen' class="col s12 m8 l11">
+                    <div class='content' id='desktop'>
+                        <div id='customCard' class="card horizontal hoverable">
                             <div class="card-image fill">
                                 <img id='imgResize' src={picture}></img>
                             </div>
@@ -43,6 +45,24 @@ class HomePage extends Component {
                         </div>
                     </div>
                 </div>
+
+                <div id='mobile' class='col s12 m8 l11'>
+                    <a onClick={this.showNav}>
+                        <i id='navBtn' class="material-icons left" style={iconSize}>menu</i>
+                    </a>
+                    <div class='card hoverable content' id='customCard'>
+                        <div class='card-image'>
+                            <img src={picture} id='cardImage'></img>
+                        </div>
+                        <div class='card-content'>
+                            <p>
+                                I'm Luis, welcome to my site! I'm a computer engineer,
+                                web/app developer, and avid gamer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         )
     }

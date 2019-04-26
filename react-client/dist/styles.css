@@ -42,11 +42,7 @@ main {
     white-space: nowrap;
 }
 
-/* imgResize {
-    width: 50%;
-    height: auto;
-    background-image: url(./img/lcastro.jpg);
-} */
+
 #imgResize {
     width: 265px;
     height: 300px;
@@ -104,29 +100,136 @@ a.active {
     transform: translate(-50%, -50%);
 }
 
-/* This is CSS for mobile screens */
+.aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 100%;
+}
+
+.aligner-item {
+  max-width: 100%;
+}
+
+/* Side Nav-Bar */
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+/* Mobile screens */
 @media only screen and (max-width: 600px) {
     #leftMenu {
         display: none;
+        visibility: hidden;
     }
 
     #mainScreen {
-        /* display: initial;
-        height: 100%; */
         padding: 0;
         border: 0;
         margin: 0;
         height: 100vh;
-        content: url(./img/board1.jpg);
-        object-fit: fill;
+        display: none;
+    }
+
+    #cardImage {
+        width: 250px;
+        height: 290px;
+    }
+
+    #mobile {
+        padding: 0;
+        border: 0;
+        margin: 0;
+        height: 100vh;
+        background-image: url(./img/board1.jpg);
+        background-size: cover;
+        visibility: visible;
+    }
+
+    #customCard {
+        width: 250px;
+    }
+
+    #mobileCard {
+        visibility: visible;
     }
 
     #rootBody {
         overflow: hidden;
     }
+
+    #desktop {
+        visibility: hidden;
+    }
 }
 
-/* Non-mobile screens */
+/* Tablet screens */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+
+}
+
+/* Desktop screens */
 @media only screen and (min-width: 601px) {
     #rootBody {
         overflow: hidden;
@@ -137,8 +240,24 @@ a.active {
         border: 0;
         margin: 0;
         height: 100vh;
-        background-image: url(./img/boardNew.jpg);
+        background-image: url(./img/board.jpg);
         object-fit: fit;
+    }
+
+    #leftMenu {
+        background-color: #459E76;
+    }
+
+    #mobile {
+        visibility: hidden;
+    }
+
+    #desktop {
+        visibility: visible;
+    }
+
+    #mobileCard {
+        visibility: hidden;
     }
 
     .centerDiv {
