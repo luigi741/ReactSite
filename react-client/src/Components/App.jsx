@@ -5,13 +5,15 @@ import HomePage from './HomePage';
 import NavBar from './HeaderComponent/NavBar';
 import Footer from './FooterComponent/Footer';
 import SideNav from './SideNavComponent/SideNav';
+import AboutPage from './AboutPage';
 
 class App extends Component {
     render() {
         return (
             <Router>
-                <HomePage />
-                <Route name="home" exact path="/" />
+                <SideNav />
+                <Route name='home' exact path='/' component={HomePage} />
+                <Route name='about' exact path='/about' component={AboutPage} />
             </Router>
         )
     }
