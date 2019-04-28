@@ -11,14 +11,17 @@ class AboutPage extends Component {
         const pics = { height: 'auto', width: '50%', position: 'absolute', left: '25%',
             'margin-top': '100px'
         }
+        const picSize = { height: '600px', width: 'auto' }
         return(
             <div>
                 <div style={pics}>
-                    <Carousel>
+                    <Carousel dynamicHeight={true}>
                         <div><img src="https://i.imgur.com/VjIrqet.jpg"/></div>
                         <div><img src="https://i.imgur.com/oCIfZPR.jpg"/></div>
                         <div><img src="https://imgur.com/kJDmDD4.jpg"/></div>
                         <div><img src="https://i.imgur.com/UYtA7bC.jpg"/></div>
+                        <div><img src="https://i.imgur.com/XMBiIhj.jpg"/></div>
+                        <div><img src="https://i.imgur.com/xLAs65C.jpg"/></div>
                     </Carousel>
                     <p>Here's some placeholder text for this page.</p>
                 </div>
